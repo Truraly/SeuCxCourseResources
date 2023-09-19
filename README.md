@@ -88,7 +88,10 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！
     <li>其他侵权内容</li>
 </ul>
 
-如果你认为本仓库的一些文件侵犯了您的权益，请 [向我们发送邮件](mailto:1293915326@qq.com) 或提交issue。我们将会从仓库中彻底清除这些文件。
+如果你认为本仓库的一些文件侵犯了您的权益，请 [向我们发送邮件](mailto:1293915326@qq.com) 或提交issue/pull request。我们将会从仓库中彻底清除这些文件。
+
+pull request的使用方法可以参考下面这篇：
+[Github pull request详细教程（提交代码到他人仓库）](https://blog.csdn.net/CY2333333/article/details/113731490)
 
 ## 许可
 由贡献者编写部分的许可如下：
