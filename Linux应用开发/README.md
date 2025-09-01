@@ -1,5 +1,11 @@
 # Linux 应用开发~~Linux 下 C++ 开发~~
 
+## 优先知道
+
+1. 请优先复习各个文件夹中带有日期年份标注的试卷，里面很大可能性会有往年题目，原样或者进行简单修改后再次考试。
+
+2. 最后有多余时间再复习剩下未作标注的野试卷或者试题 ( 来源不明 ) ，作为额外补充。
+
 ## 简单介绍
 
 ### 关于 cx 的这门课
@@ -13,8 +19,8 @@
 课程分为 2 块：
 
 1. Linux 简单介绍以及指令使用
-2. Linux 下 C 语言程序开发
 
+2. Linux 下 C 语言程序开发
 
 ## 课程内容
 
@@ -28,7 +34,10 @@
 
 常见的 Linux C 头文件文档网站：
 
-- https://www.man7.org/linux/man-pages/index.html
-- https://en.cppreference.com/w/
+- <https://www.man7.org/linux/man-pages/index.html>
+
+- <https://en.cppreference.com/w/>
+
 - [Open Group Library](https://publications.opengroup.org/)
-- https://pubs.opengroup.org/onlinepubs/7908799/
+
+- <https://pubs.opengroup.org/onlinepubs/7908799/>
