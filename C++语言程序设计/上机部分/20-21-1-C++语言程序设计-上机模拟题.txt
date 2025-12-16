@@ -1,5 +1,3 @@
-QQ:2305101452
-呆@西西弗斯
 定义一个正方形类，计算面积、周长，改变正方形大小。
 #include <iostream>
 using namespace std;
