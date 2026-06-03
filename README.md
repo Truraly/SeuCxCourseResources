@@ -2,6 +2,9 @@
 
 我们创建了可以文件网站，可以直接下载，欢迎试用：[http://openlist.truraly.fun/](http://openlist.truraly.fun/成贤学院课程攻略共享计划)
 
+
+Github 仓库地址：[https://github.com/Truraly/SeuCxCourseResources](https://github.com/Truraly/SeuCxCourseResources)
+
 ## 前言
 
 来到一所大学，从第一次接触许多课，直到一门一门完成，这个过程中我们时常收集起许多资料和情报。
