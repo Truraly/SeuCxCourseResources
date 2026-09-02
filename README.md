@@ -1,7 +1,6 @@
 # 成贤学院课程攻略共享计划
 
-我们创建了可以文件网站，可以直接下载，欢迎试用：[http://openlist.truraly.fun/](http://openlist.truraly.fun/成贤学院课程攻略共享计划)
-
+我们创建了可以文件网站，可以直接下载，欢迎试用：[https://openlist.truraly.fun/](https://openlist.truraly.fun/%E6%88%90%E8%B4%A4%E5%AD%A6%E9%99%A2%E8%AF%BE%E7%A8%8B%E6%94%BB%E7%95%A5%E5%85%B1%E4%BA%AB%E8%AE%A1%E5%88%92)
 
 Github 仓库地址：[https://github.com/Truraly/SeuCxCourseResources](https://github.com/Truraly/SeuCxCourseResources)
 

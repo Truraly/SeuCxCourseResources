@@ -1,0 +1,233 @@
+QQ:2305101452
+呆@西西弗斯
+定义一个正方形类，计算面积、周长，改变正方形大小。
+#include <iostream>
+using namespace std;
+class square
+{
+public:
+	float length;
+public:
+	void get_value();
+	float S();
+	float C();
+	void display();
+	void change(float n)
+	{
+		cout << "改变边长";
+		cin >> n;
+		length = n;
+	}
+};
+void square::get_value()
+{
+	cout << "输入正方形的边长length：";
+	cin >> length;
+}
+float square::S()
+{
+	return (length * length);
+}
+float square::C()
+{
+	return (length * 4);
+}
+void square::display()
+{
+	cout << S()<<',' << C() << endl;
+}
+int main()
+{
+	square s;
+	float n = 0;
+	s.get_value();
+	cout << "面积和周长是：" << endl;
+	s.display();
+	s.change(n);
+	cout << "面积和周长是：" << endl;
+	s.display();
+	system("pause");
+	return 0;
+}
+
+判断一个数是否为素数。
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n;
+	cout << "输入一个正整数：";
+	cin >> n;
+	int prime = 1;
+		for (int i=2;i<=n-1;i++)
+			if (n % i == 0)
+			{
+			 prime = 0;
+			break;
+			}
+		if (prime == 0)
+			cout << "no" << endl;
+		else
+			cout << "yes" << endl;
+		system("pause");
+		return 0;
+
+}
+读入一组整数，做排序+查找。
+例如：对静态查找表先冒泡排序为{5,13,19,21,37,56,64,75,80,88,92}，再采用折半查找算法查找37。
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a[11] = { 19,13,5,21,37,64,56,92,88,80,75};
+	int i, j, temp;
+	for (i = 0; i < 10; i++)
+		for (j = 0; j < 10 - i; j++)
+			if (a[j] > a[j + 1])
+			{
+				temp = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = temp;
+			}
+	for (i = 0; i <= 10; i++)
+		cout << a[i] << ' ';
+	    cout << endl;
+	int low, high, binary, x;
+	cout << "输入查找的数据:";
+	cin >> x;
+	low = 0; high = 10;
+	binary = (low + high) / 2;
+	while (x != a[binary] && low <= high)
+	{
+		if (x < a[binary])
+			high = binary - 1;
+		else
+			low = binary + 1;
+		binary = (low + high) / 2;
+	}
+	if (low <= high)
+		cout << "查找成功" << endl;
+	else
+		cout << "no find!" << endl;
+	system("pause");
+	return 0;
+}
+定义一个复数类，通过重载运算符：+=、==，实现两个复数之间的运算，并在主函数输出复数计算结果
+#include<iostream>
+using namespace std;
+class complex
+{
+private:
+	int real, imag;
+public:
+	complex(int r = 0, int i = 0)
+	{
+		real = r; imag = i;
+	}
+	void operator+=(complex&);
+	friend int operator ==(complex&, complex&);
+	void print();
+};
+void complex ::operator +=(complex&c)
+{
+	real = real + c.real;
+	imag = imag + c.imag;
+}
+int operator==(complex& c1, complex& c2)
+{
+	if (c1.real == c2.real && c1.imag == c2.imag)
+		return 1;
+	else
+		return 0;
+}
+void complex::print()
+{
+	cout <<'('<< real<<','<<imag<<')'<<endl;
+
+}
+int main()
+{
+	complex c1(1, 2), c2(2, 3);
+	c1 += c2;
+	c1.print();
+	if (c1 == c2)
+		cout << "两个复数相等" << endl;
+	else
+		cout << "两个复数不相等" << endl;
+	system("pause");
+	return 0;
+}
+编写程序定义Point类，在类中定义整型的私有成员变量x、y，定义成员函数Point& operator++()；Point operator++(int)；以实现对Point类重载“++”(自增)运算符，
+定义成员函数Point＆operator－－()；Point operator－－(int)；以实现对Point类重载“－－”(自减)运算符，实现对坐标值的改变。
+再在该类上对双目运算符“+”进行重载，实现两个点相加（即p1+p2表示各个点的X相加、各个点的Y相加）。
+#include<iostream>
+using namespace std;
+class point
+{
+private:
+	int  X, Y;
+public:
+	point(int x, int y)
+	{
+		X = x; Y = y;
+	}
+	point (){ }
+	void print()
+	{
+		cout << '(' << X << ',' << Y << ')' << endl;
+	}
+	point& operator++();
+	point operator++(int);
+	point& operator--();
+	point operator--(int);
+	friend point operator+(point c1,point c2);
+};
+point& point::operator++()
+{
+	++X;
+	++Y;
+	return *this;
+}
+point point ::operator++(int)
+{
+	point old=*this;
+	++( *this);
+	return old;
+}
+point& point::operator--()
+{
+	--X;
+	--Y;
+	return *this;
+}
+point point ::operator--(int)
+{
+	point old = *this;
+	--(*this);
+	return old;
+}
+point operator+(point c1, point c2)
+{
+	point c;
+	c.X = c1.X + c2.X;
+	c.Y = c1.Y + c2.Y;
+	return c;
+}
+int main()
+{
+	point p(1, 2), c2(2, 3), c;
+	cout << "显示c1初始坐标："; p.print();
+	cout << "++c1:"; (++p).print();
+	cout << "当前坐标："; p.print();
+	cout << "c1++:"; (p++).print();
+	cout << "当前坐标："; p.print();
+	cout << "--p:"; (--p).print();
+	cout << "当前坐标："; p.print();
+	cout << "p--:"; (p--).print();
+	cout << "当前坐标："; p.print();
+	c = p + c2;
+	cout << "c=p+c2:";
+	c.print();
+	system("pause");
+	return 0;
+}

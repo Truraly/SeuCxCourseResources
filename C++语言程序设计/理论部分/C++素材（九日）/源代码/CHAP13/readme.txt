@@ -1,0 +1,1 @@
+Egavga.bgi文件一定要与DRAW.EXE可执行文件放在同一个目录下。
